@@ -16,8 +16,7 @@ class EuroController extends Controller
      */
     public function actionIndex()
     {
-        $appRequest = Yii::$app->request;
-        $get = $appRequest->get();
+        $get = Yii::$app->request->get();
         $isAjax = (isset($get['type']) && ($get['type'] === 'ajax'));
         $msg = 'Service is temporarily unavailable. Try again later.';
         $sourcesList = Yii::$app->params['EuroSourcesList'];
